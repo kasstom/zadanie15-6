@@ -1,18 +1,34 @@
 {
-  "name": "zadanie-15.6",
+  "name": "modul15_7",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel src -watch -d js ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startAll": "parallelshell \"npm run server\" \"npm run start\" \"npm run watch:sass\"",
     "server": "http-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel script.js --watch --out-file script-compiled.js",
+    "watch:sass": "node-sass --output-style expanded sass/style.scss css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasstom/zadanie15-7"
   },
   "author": "Aneta",
-  "license": "Open",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kasstom/zadanie15-7"
+  },
+  "homepage": "https://github.com/kasstom/zadanie15-7",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
-    "http-server": "^0.10.0"
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.8.3",
+    "npm-run-all": "^4.1.2",
+    "nu-html-checker": "^0.1.0",
+    "parallelshell": "^3.0.2"
   }
 }
